@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO app</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Todo app</h1>
+      </header>
+      <section class="todo-app">
+        <div class="inputs">
+          <select name="categories" id="categories">
+            <option value="work">Work</option>
+            <option value="study">Study</option>
+            <option value="home">Home</option>
+          </select>
+          <div class="input-box">
+            <input type="text" name="text" placeholder="Task to be done" />
+            <button>Add</button>
+          </div>
+        </div>
+        <div class="todo-list">
+          <div class="todo">
+            <div class="category">
+              <div>Category</div>
+              <div class="buttons">
+                <span class="done">V</span><span class="cancel">X</span>
+              </div>
+            </div>
+            <p class="text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </p>
+            <div class="time">time</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

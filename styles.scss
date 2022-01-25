@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
+
+$font: "Mochiy Pop P One", sans-serif;
+$background-color: #f4f4f4;
+$box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$input-border: #a6a6a6;
+$border-radius: 5px;
+$btn-color: #2196f3;
+$btn-color-hover: #1769aa;
+
+html * {
+  font-family: $font;
+}
+
+body {
+  background-color: $background-color;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo-app {
+  width: 50%;
+  background-color: white;
+  padding: 24px;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+}
+
+select {
+  width: 75%;
+  padding: 10px;
+  border: 1px solid $input-border;
+  border-radius: $border-radius;
+  margin-bottom: 8px;
+  margin-right: 10px;
+}
+
+.inputs {
+  margin-bottom: 48px;
+}
+
+.input-box {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    width: 65%;
+    padding: 8px 12px;
+    border: 1px solid $input-border;
+    border-radius: $border-radius;
+  }
+
+  button {
+    width: 25%;
+    padding: 8px;
+    border-radius: $border-radius;
+    border: none;
+    background-color: $btn-color;
+    color: white;
+    font-size: 16px;
+
+    &:hover {
+      background-color: $btn-color-hover;
+    }
+  }
+}
+
+.todo-list {
+  display: flex;
+  justify-content: space-between;
+
+  .todo {
+    padding: 8px;
+    width: 30%;
+    margin-right: 16px;
+    border: 2px solid $background-color;
+    border-radius: $border-radius;
+
+    .category {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+
+      .buttons {
+        .done {
+          color: green;
+        }
+
+        .cancel {
+          color: red;
+        }
+      }
+    }
+
+    .text {
+      font-size: 10px;
+    }
+
+    .time {
+      font-size: 10px;
+      color: grey;
+    }
+  }
+}

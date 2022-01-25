@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
+html * {
+  font-family: "Mochiy Pop P One", sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.todo-app {
+  width: 50%;
+  background-color: white;
+  padding: 24px;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+select {
+  width: 75%;
+  padding: 10px;
+  border: 1px solid #a6a6a6;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  margin-right: 10px;
+}
+
+.inputs {
+  margin-bottom: 48px;
+}
+
+.input-box {
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.input-box input {
+  width: 65%;
+  padding: 8px 12px;
+  border: 1px solid #a6a6a6;
+  border-radius: 5px;
+}
+
+.input-box button {
+  width: 25%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2196f3;
+  color: white;
+  font-size: 16px;
+}
+
+.input-box button:hover {
+  background-color: #1769aa;
+}
+
+.todo-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.todo-list .todo {
+  padding: 8px;
+  width: 30%;
+  margin-right: 16px;
+  border: 2px solid #f4f4f4;
+  border-radius: 5px;
+}
+
+.todo-list .todo .category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 12px;
+}
+
+.todo-list .todo .category .buttons .done {
+  color: green;
+}
+
+.todo-list .todo .category .buttons .cancel {
+  color: red;
+}
+
+.todo-list .todo .text {
+  font-size: 10px;
+}
+
+.todo-list .todo .time {
+  font-size: 10px;
+  color: grey;
+}
+/*# sourceMappingURL=styles.css.map */
