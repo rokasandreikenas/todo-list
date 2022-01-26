@@ -7,6 +7,8 @@ $input-border: #a6a6a6;
 $border-radius: 5px;
 $btn-color: #2196f3;
 $btn-color-hover: #1769aa;
+$success-color-border: #90dd99;
+$success-color-bg: #e8f8ea;
 
 html * {
   font-family: $font;
@@ -93,11 +95,11 @@ select {
       font-size: 12px;
 
       .buttons {
-        .done {
+        .done-button {
           color: green;
         }
 
-        .cancel {
+        .cancel-button {
           color: red;
         }
       }
@@ -112,4 +114,9 @@ select {
       color: grey;
     }
   }
+}
+
+.done-item {
+  background-color: $success-color-bg;
+  border-color: $success-color-border !important;
 }

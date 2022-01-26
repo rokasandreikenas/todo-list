@@ -113,11 +113,11 @@ select {
   font-size: 12px;
 }
 
-.todo-list .todo .category .buttons .done {
+.todo-list .todo .category .buttons .done-button {
   color: green;
 }
 
-.todo-list .todo .category .buttons .cancel {
+.todo-list .todo .category .buttons .cancel-button {
   color: red;
 }
 
@@ -128,5 +128,10 @@ select {
 .todo-list .todo .time {
   font-size: 10px;
   color: grey;
+}
+
+.done-item {
+  background-color: #e8f8ea;
+  border-color: #90dd99 !important;
 }
 /*# sourceMappingURL=styles.css.map */
