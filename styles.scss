@@ -73,14 +73,19 @@ select {
 
 .todo-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 
   .todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 8px;
-    width: 30%;
-    margin-right: 16px;
+    margin-right: 8px;
+    margin-bottom: 8px;
     border: 2px solid $background-color;
     border-radius: $border-radius;
+    flex-basis: 27%;
+    min-height: 100px;
 
     .category {
       display: flex;
