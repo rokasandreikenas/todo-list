@@ -1,5 +1,5 @@
 const addButton = document.querySelector(".input-box button");
-const todoList = [];
+const todoList = JSON.parse(localStorage.getItem("todo-list")) || [];
 
 const pushTodoToHtml = (todo) => {
   const todoListTag = document.querySelector(".todo-list");
@@ -22,14 +22,25 @@ const pushTodoToHtml = (todo) => {
     <div class="time">${getTodaysDate()}</div>
   `;
 
+  if (!todo.isDone) {
+    divNode.classList.add("done-item");
+  }
+
   const doneButton = divNode.querySelector(".done-button");
-  doneButton.addEventListener("click", () => doneButtonClickHandler(divNode));
+  doneButton.addEventListener("click", () =>
+    doneButtonClickHandler(divNode, todo.isDone)
+  );
   const cancelButton = divNode.querySelector(".cancel-button");
 
   todoListTag.append(divNode);
 };
 
-const doneButtonClickHandler = (todoElement) => {
+const doneButtonClickHandler = (todoElement, isDone) => {
+  if (isDone) {
+    // change todo property isDone to false
+  } else {
+    // change todo propery isDone to true
+  }
   todoElement.classList.toggle("done-item");
 };
 
@@ -58,9 +69,11 @@ const handleAddTodoItem = () => {
       text: textInput.value,
       category: selectInput.value,
       id: new Date().valueOf(),
+      isDone: false,
     };
 
     todoList.push(todo);
+    localStorage.setItem("todo-list", JSON.stringify(todoList));
     pushTodoToHtml(todo);
     textInput.value = "";
   } else {
@@ -69,3 +82,4 @@ const handleAddTodoItem = () => {
 };
 
 addButton.addEventListener("click", handleAddTodoItem);
+todoList.forEach(pushTodoToHtml);
