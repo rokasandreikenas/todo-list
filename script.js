@@ -36,12 +36,12 @@ const pushTodoToHtml = (todo) => {
 };
 
 const doneButtonClickHandler = (todoElement, todo) => {
-  const index = todoList.findIndex((t) => t.id === todo.id); // finds index with same id
+  const index = todoList.findIndex((t) => t.id === todo.id); // surandam indexa
 
-  todo.isDone = !todo.isDone;
-  todoList[index] = todo;
+  todo.isDone = !todo.isDone; // pakeiciam duomenis
+  todoList[index] = todo; // nustatom nauja todo i seno vieta
 
-  localStorage.setItem("todo-list", JSON.stringify(todoList));
+  localStorage.setItem("todo-list", JSON.stringify(todoList)); // nustatom nauja todolist i localstorage
   todoElement.classList.toggle("done-item");
 };
 
