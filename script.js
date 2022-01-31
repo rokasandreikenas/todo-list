@@ -22,25 +22,26 @@ const pushTodoToHtml = (todo) => {
     <div class="time">${getTodaysDate()}</div>
   `;
 
-  if (!todo.isDone) {
+  if (todo.isDone) {
     divNode.classList.add("done-item");
   }
 
   const doneButton = divNode.querySelector(".done-button");
   doneButton.addEventListener("click", () =>
-    doneButtonClickHandler(divNode, todo.isDone)
+    doneButtonClickHandler(divNode, todo)
   );
   const cancelButton = divNode.querySelector(".cancel-button");
 
   todoListTag.append(divNode);
 };
 
-const doneButtonClickHandler = (todoElement, isDone) => {
-  if (isDone) {
-    // change todo property isDone to false
-  } else {
-    // change todo propery isDone to true
-  }
+const doneButtonClickHandler = (todoElement, todo) => {
+  const index = todoList.findIndex((t) => t.id === todo.id); // finds index with same id
+
+  todo.isDone = !todo.isDone;
+  todoList[index] = todo;
+
+  localStorage.setItem("todo-list", JSON.stringify(todoList));
   todoElement.classList.toggle("done-item");
 };
 
